@@ -8,9 +8,9 @@
 </head>
 <body>
 
-<a href=""></a>
-<a href=""></a>
-<a href=""></a>
+<a href="/profil.php?id=12"></a>
+<a href="/profil.php?id=18"></a>
+<a href="/profil.php?id=22"></a>
     
 </body>
 </html>

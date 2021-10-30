@@ -24,9 +24,10 @@
     }
     else
     {
-        echo("undefined");
+        echo("please enter your profile id to the browser");
     }
      
+    ?>
 
 
 
