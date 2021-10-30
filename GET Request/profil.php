@@ -13,7 +13,18 @@
     <?php
     if(isset($_GET["id"]))
     {
-        if()
+        if($_GET["id"] == 12)
+        echo("ERDEM");
+        else if($_GET["id"] == 18)
+        echo("Schmidt");
+        else if($_GET["id"] == 22)
+        echo("Müller");
+        else
+        echo("unknown");
+    }
+    else
+    {
+        
     }
      
 
