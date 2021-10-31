@@ -6,12 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body
+        {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
         form input
         {
             width: 200px;
             padding: 15px;
             border-radius: 8px;
             margin-bottom: 10px;
+        }
+        .box
+        {
+            margin-top: 10px;
+        }
+        .box input
+        {
+            cursor: pointer;
+            padding: 10px 10px;
+            border-radius: 4px;
         }
     </style>
 </head>
@@ -22,5 +40,12 @@
         <input type="number" name="second_number" placeholder="Please enter second number"> <br>
         <input type="readonly" name="result" placeholder="Result">
     </form>
+
+    <div class="box">
+        <input type="submit" name="operator">
+        <input type="submit" name="operator">
+        <input type="submit" name="operator">
+        <input type="submit" name="operator">
+    </div>
 </body>
 </html>
