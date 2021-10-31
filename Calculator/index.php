@@ -10,7 +10,7 @@
         {
             height: 100vh;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             flex-direction: column;
         }
@@ -33,19 +33,25 @@
         }
     </style>
 </head>
+<?php
+$first_num = $_POST['first_number'];
+$second_num = $_POST['second_number'];
+$operator = $_POST['operator'];
+$result = '';
+?>
 <body>
     <h4>BASIC CALCULATOR WITH PHP</h4>
     <form action="" method="post" id="calculator">
-        <input type="number" name="first_number" placeholder="Please enter first number"> <br>
-        <input type="number" name="second_number" placeholder="Please enter second number"> <br>
+        <input type="number" name="first_number" placeholder="Please enter first number" id="first_number"> <br>
+        <input type="number" name="second_number" placeholder="Please enter second number" id="second_number"> <br>
         <input type="readonly" name="result" placeholder="Result">
-    </form>
 
-    <div class="box">
-        <input type="submit" name="operator" value="Add">
-        <input type="submit" name="operator" value="Substract">
-        <input type="submit" name="operator" value="Multiply">
+        <div class="box">
+        <input type="submit" name="operator" value="Add"> <br>
+        <input type="submit" name="operator" value="Substract"> <br>
+        <input type="submit" name="operator" value="Multiply"> <br>
         <input type="submit" name="operator" value="Divide">
-    </div>
+        </div>
+    </form>
 </body>
 </html>
