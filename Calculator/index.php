@@ -42,10 +42,10 @@
     </form>
 
     <div class="box">
-        <input type="submit" name="operator">
-        <input type="submit" name="operator">
-        <input type="submit" name="operator">
-        <input type="submit" name="operator">
+        <input type="submit" name="operator" value="Add">
+        <input type="submit" name="operator" value="Substract">
+        <input type="submit" name="operator" value="Multiply">
+        <input type="submit" name="operator" value="Divide">
     </div>
 </body>
 </html>
