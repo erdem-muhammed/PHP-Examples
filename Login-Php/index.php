@@ -14,13 +14,29 @@
             justify-content: center;
             align-items: center;
         }
+        body form
+        {
+            width: 150px;
+        }
+        body form input
+        {
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+        body form input[type=submit]
+        {
+            cursor: pointer;
+            background-color: white;
+            border: 1px solid #111;
+        }
     </style>
 </head>
 <body>
     <form method="post" action="http://localhost/Login-Php/login.php">
           <input type="text" placeholder="Username" name="username" required>
           <input type="password" placeholder="Password" name="pass" required>
-          <input type="submit" value="login">
+          <input type="submit" value="Login">
     </form>
 </body>
 </html>
