@@ -23,12 +23,22 @@
             padding: 10px;
             margin-bottom: 10px;
             width: 100%;
+            border-radius: 2px;
+            border: none;
+            border-bottom: 1px solid black;
         }
         body form input[type=submit]
         {
             cursor: pointer;
             background-color: white;
             border: 1px solid #111;
+            font-weight: bold;
+            transition: all ease 0.4s;
+        }
+        body form input[type=submit]:hover
+        {
+            background-color: black;
+            color: white;
         }
     </style>
 </head>
