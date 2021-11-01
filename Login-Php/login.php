@@ -9,5 +9,9 @@ if(isset($_POST["username"]) && isset($_POST["pass"]))
     {
         echo("You have successfully logged in!!");
     }
+    else
+    {
+        echo("Username or Password is wrong!!");
+    }
 }
 
