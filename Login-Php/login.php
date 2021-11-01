@@ -14,4 +14,8 @@ if(isset($_POST["username"]) && isset($_POST["pass"]))
         echo("Username or Password is wrong!!");
     }
 }
+else
+{
+    echo("Data not found!!");
+}
 
