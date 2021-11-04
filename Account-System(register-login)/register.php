@@ -14,13 +14,14 @@ empty($_POST["email"]) || empty($_POST["pass"]) || empty($_POST["pass2"]))
     $pass = $_POST["pass"];
     $pass2 = $_POST["pass2"];
 
-    
+
     if(file_exists("User/" . $email . ".txt"))
     {
         //user already exists 
-        echo("User already exists!")  
+        echo("User already exists!");
     }
-
+    
+    $data = fopen("User/" . $email . ".txt", "w");
 
 
 ?>
