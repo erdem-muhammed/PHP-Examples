@@ -10,10 +10,15 @@
 
    if($data === false)
    {
+       //user check
        echo("User not found");
        return;
    }
 
+   $dataContent = fread($data, filesize($path));
+   fclose($data);
+
+   
 ?>
 
 
