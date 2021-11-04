@@ -24,6 +24,15 @@ empty($_POST["email"]) || empty($_POST["pass"]) || empty($_POST["pass2"]))
     $data = fopen("User/" . $email . ".txt", "w");
     fwrite($data, "Name:" . $name . ";Surname:" . $surname . ";E-Mail:" . $email . ";Password:" . $pass);
     fclose($data);
+
+
+    $server = "localhost";
+    $databankNAme = "dk_teamprojekt";
+    $databankUser = "root";
+    $databankPass = "";
+
+    $connection = new mysqli($server, $databankUser, $databankPass, $databankName);
+
 ?>
 
 <!DOCTYPE html>
