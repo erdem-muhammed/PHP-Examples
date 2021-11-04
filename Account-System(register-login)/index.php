@@ -14,7 +14,7 @@
       <input type="email" placeholder="Email Address" name="email" required>
       <input type="text" placeholder="Birthday" name="birthday" required>
       <input type="password" placeholder="Password" name="pass" required>
-      <input type="password" placeholder="Please enter your password again!">
+      <input type="password" placeholder="Please enter your password again!" name="pass2" required>
       <input type="submit" value="Create an account">
     </form>
 </body>
