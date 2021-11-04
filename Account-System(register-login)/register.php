@@ -7,16 +7,21 @@ empty($_POST["email"]) || empty($_POST["pass"]) || empty($_POST["pass2"]))
 {
     //there can be a problem with register!!
     return;
+}
+    $name = $_POST["name"];
+    $surname = $_POST["surname"];
+    $email = $_POST["email"];
+    $pass = $_POST["pass"];
+    $pass2 = $_POST["pass2"];
 
-
-
+    
     if(file_exists("User/" . $email . ".txt"))
     {
         //user already exists 
-        echo("User already exists! ")  
+        echo("User already exists!")  
     }
 
-}
+
 
 ?>
 
