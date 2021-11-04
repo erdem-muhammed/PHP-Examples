@@ -18,7 +18,10 @@
    $dataContent = fread($data, filesize($path));
    fclose($data);
 
+   $data = explode(";", $dataContent);  //name, surname, email, password
+   $password = explode(":", $data[3])[1];
    
+
 ?>
 
 
