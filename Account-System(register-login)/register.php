@@ -22,8 +22,8 @@ empty($_POST["email"]) || empty($_POST["pass"]) || empty($_POST["pass2"]))
     }
     
     $data = fopen("User/" . $email . ".txt", "w");
-
-
+    fwrite($data, "Name:" . $name . ";Surname:" . $surname . ";E-Mail:" . $email . ";Password:" . $pass);
+    fclose($data);
 ?>
 
 <!DOCTYPE html>
