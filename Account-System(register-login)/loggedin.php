@@ -5,6 +5,14 @@
        return;
    }
    $path = "User/" . $_POST["email"] . ".txt";
+   
+   $data = fopen($path, "r");
+
+   if($data === false)
+   {
+       echo("User not found");
+       return;
+   }
 
 ?>
 
