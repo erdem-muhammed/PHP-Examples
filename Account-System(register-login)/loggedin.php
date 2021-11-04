@@ -20,7 +20,13 @@
 
    $data = explode(";", $dataContent);  //name, surname, email, password
    $password = explode(":", $data[3])[1];
-   
+
+   if($_POST["pass"] != $password)  //password check
+   {
+       echo("Wrong password");
+       return;
+   }
+
 
 ?>
 
