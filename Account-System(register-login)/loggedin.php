@@ -1,3 +1,16 @@
+<?php
+   
+   if(empty($_POST["email"]) || empty($_POST["pass"]))
+   {
+       return;
+   }
+   $path = "User/" . $_POST["email"] . ".txt";
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
