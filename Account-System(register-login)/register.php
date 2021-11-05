@@ -15,7 +15,7 @@ empty($_POST["email"]) || empty($_POST["pass"]) || empty($_POST["pass2"]))
     $pass2 = $_POST["pass2"];
 
 
-   /* if(file_exists("User/" . $email . ".txt"))
+    if(file_exists("User/" . $email . ".txt"))
     {
         //user already exists 
         echo("User already exists!");
@@ -24,9 +24,10 @@ empty($_POST["email"]) || empty($_POST["pass"]) || empty($_POST["pass2"]))
     $data = fopen("User/" . $email . ".txt", "w");
     fwrite($data, "Name:" . $name . ";Surname:" . $surname . ";E-Mail:" . $email . ";Password:" . $pass);
     fclose($data);
-    */
+    
 
-
+     //data adding to local server(mysql)
+    /*
     $server = "localhost";
     $databankNAme = "dk_teamprojekt";
     $databankUser = "root";
@@ -43,7 +44,7 @@ empty($_POST["email"]) || empty($_POST["pass"]) || empty($_POST["pass2"]))
     {
         echo("There is a problem here!!");
     }
-    $connection->close();
+    $connection->close(); */
 ?>
 
 <!DOCTYPE html>
