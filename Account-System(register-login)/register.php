@@ -15,7 +15,7 @@ empty($_POST["email"]) || empty($_POST["pass"]) || empty($_POST["pass2"]))
     $pass2 = $_POST["pass2"];
 
 
-    if(file_exists("User/" . $email . ".txt"))
+   /* if(file_exists("User/" . $email . ".txt"))
     {
         //user already exists 
         echo("User already exists!");
@@ -24,6 +24,7 @@ empty($_POST["email"]) || empty($_POST["pass"]) || empty($_POST["pass2"]))
     $data = fopen("User/" . $email . ".txt", "w");
     fwrite($data, "Name:" . $name . ";Surname:" . $surname . ";E-Mail:" . $email . ";Password:" . $pass);
     fclose($data);
+    */
 
 
     $server = "localhost";
@@ -32,7 +33,17 @@ empty($_POST["email"]) || empty($_POST["pass"]) || empty($_POST["pass2"]))
     $databankPass = "";
 
     $connection = new mysqli($server, $databankUser, $databankPass, $databankName);
+    $request = "INSERT INTO user (name, surname, email, password)  VALUES ('" . $name . "', '" . $surname . "', '" . $email . "', '" . $pass . "');
 
+    if($connection->query($request) === true)
+    {
+        echo("You have successfully registered!");
+    }
+    else
+    {
+        echo("There is a problem here!!");
+    }
+    $connection->close();
 ?>
 
 <!DOCTYPE html>
