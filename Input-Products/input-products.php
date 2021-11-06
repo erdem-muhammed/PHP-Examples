@@ -22,6 +22,9 @@ if(!empty($_POST["title"]) || !empty($_POST["features"]) ||
     $query = "INSERT INTO products (name, features, price, stock) VALUES ('" . $_POST["title"] . "', '" . $_POST["features"]
     . "', '" . $_POST["price"] . "', '" . $_POST["stock"] . "');";
     $sending = $connection->query($query);
+
+    // 3.Close the connection
+    $connection->close();
 }
 
 ?>
