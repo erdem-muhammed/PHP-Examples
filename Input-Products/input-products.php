@@ -14,7 +14,11 @@ if(!empty($_POST["title"]) || !empty($_POST["features"]) ||
     $user = "root";
     $pass = "123456";
     $sql_name = "online-shop";
-    
+
+    // 1.Connection
+    $connection = new mysqli($server, $user, $pass, $sql_name);
+
+    // 2.Send Query
 }
 
 ?>
