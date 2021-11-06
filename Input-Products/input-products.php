@@ -19,6 +19,9 @@ if(!empty($_POST["title"]) || !empty($_POST["features"]) ||
     $connection = new mysqli($server, $user, $pass, $sql_name);
 
     // 2.Send Query
+    $query = "INSERT INTO products (name, features, price, stock) VALUES ('" . $_POST["title"] . "', '" . $_POST["features"]
+    . "', '" . $_POST["price"] . "', '" . $_POST["stock"] . "');";
+    $sending = $connection->query($query);
 }
 
 ?>
