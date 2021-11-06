@@ -1,5 +1,14 @@
 <?php
 
+if(!empty($_POST["title"]) || !empty($_POST["features"]) || 
+!empty($_POST["price"]) || !empty($_POST["stock"]))
+{
+    $server = "localhost";
+    $user = "root";
+    $pass = "123456";
+    $sql_name = "online-shop";
+}
+
 ?>
 
 
