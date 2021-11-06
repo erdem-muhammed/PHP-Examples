@@ -49,8 +49,12 @@ if(!empty($_POST["title"]) || !empty($_POST["features"]) ||
     }
     form input, form textarea
     {
-        
+        margin-bottom: 8px;
+        border-radius: 8px;
+        padding: 10px;
+        border: 1px solid black;
     }
+
     </style>
 </head>
 <body>
