@@ -1,7 +1,7 @@
 <?php
 
 $showForm = true;
-
+$error = false;
 
 if(!empty($_POST["title"]) || !empty($_POST["features"]) || 
 !empty($_POST["price"]) || !empty($_POST["stock"]))
@@ -16,10 +16,10 @@ if(!empty($_POST["title"]) || !empty($_POST["features"]) ||
     $server = "localhost";
     $user = "root";
     $pass = "";
-    $sql_name = "online-shop";
+    $db_name = "online-shop";
 
     // 1.Connection
-    $connection = new mysqli($server, $user, $pass, $sql_name);
+    $connection = new mysqli($server, $user, $pass, $db_name);
 
     // 2.Send Query
     $query = "INSERT INTO products (name, features, price, stock) VALUES ('" . $_POST["title"] . "', '" . $_POST["features"]
@@ -28,7 +28,7 @@ if(!empty($_POST["title"]) || !empty($_POST["features"]) ||
 
     if($sending !== true)
     {
-        
+        $error = true;
     }
 
     // 3.Close the connection
@@ -72,6 +72,15 @@ if(!empty($_POST["title"]) || !empty($_POST["features"]) ||
         <input type="text" placeholder="Stock" name="stock">
         <input type="submit" value="ADD" style="cursor: pointer">
     </form>
-    }
+    <?php }
+    else if(!$error){ ?>
+
+    Product added!
+    <?php }
+    else { ?>
+
+    There is an error here!!!
+
+    <?php } ?>
 </body>
 </html>
