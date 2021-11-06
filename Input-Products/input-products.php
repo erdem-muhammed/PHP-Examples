@@ -1,9 +1,12 @@
 <?php
 
+$showForm = true;
+
+
 if(!empty($_POST["title"]) || !empty($_POST["features"]) || 
 !empty($_POST["price"]) || !empty($_POST["stock"]))
 {
-
+    $showForm = false;
     //enter the info that comes to database:
     /**
      * 1. Connection
@@ -12,7 +15,7 @@ if(!empty($_POST["title"]) || !empty($_POST["features"]) ||
      */
     $server = "localhost";
     $user = "root";
-    $pass = "123456";
+    $pass = "";
     $sql_name = "online-shop";
 
     // 1.Connection
@@ -23,10 +26,14 @@ if(!empty($_POST["title"]) || !empty($_POST["features"]) ||
     . "', '" . $_POST["price"] . "', '" . $_POST["stock"] . "');";
     $sending = $connection->query($query);
 
+    if($sending !== true)
+    {
+        
+    }
+
     // 3.Close the connection
     $connection->close();
 }
-
 ?>
 
 
@@ -54,16 +61,17 @@ if(!empty($_POST["title"]) || !empty($_POST["features"]) ||
         padding: 10px;
         border: 1px solid black;
     }
-
     </style>
 </head>
 <body>
+    <?php if($showForm) { ?>
     <form action="" method="POST">
         <input type="text" placeholder="Title" name="title">
         <textarea placeholder="Features" name="features"></textarea>
         <input type="text" placeholder="Price" name="price">
         <input type="text" placeholder="Stock" name="stock">
-        <input type="submit" value="add">
+        <input type="submit" value="ADD" style="cursor: pointer">
     </form>
+    }
 </body>
 </html>
