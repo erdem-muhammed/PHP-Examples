@@ -3,10 +3,18 @@
 if(!empty($_POST["title"]) || !empty($_POST["features"]) || 
 !empty($_POST["price"]) || !empty($_POST["stock"]))
 {
+
+    //enter the info that comes to database:
+    /**
+     * 1. Connection
+     * 2. Send Query
+     * 3. Close the connection
+     */
     $server = "localhost";
     $user = "root";
     $pass = "123456";
     $sql_name = "online-shop";
+    
 }
 
 ?>
