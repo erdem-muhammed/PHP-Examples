@@ -40,7 +40,17 @@ if(!empty($_POST["title"]) || !empty($_POST["features"]) ||
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-
+    form
+    {
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    form input, form textarea
+    {
+        
+    }
     </style>
 </head>
 <body>
